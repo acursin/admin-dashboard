@@ -29,27 +29,65 @@ img {
     font-family: "Roboto", sans-serif;
 }
 
-.c-sidebar {
+.l-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.c-icon {
+    width: 1.5rem;
+}
+
+.c-icon--light {
+    fill: #fff;
+}
+
+.c-nav {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
     padding: 24px;
     background: royalblue;
 }
 
-.c-sidebar__header {
+.c-nav__header {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
 ._square {
-    width: 75px;
-    height: 75px;
+    width: 3rem;
+    height: 3rem;
     background: #fff;
 }
 
-.c-sidebar__title {
+.c-nav__title {
     font-size: 2rem;
     font-weight: bold;
     color: white;
+}
+
+.l-nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.c-nav__link {
+    display: flex;
+    gap: 16px;
+    text-decoration: none;
+}
+
+.c-nav__text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
 }
 
 .c-content {
@@ -97,7 +135,7 @@ img {
 .l-project__icons {
     align-self: end;
     display: grid;
-    grid-template-columns: repeat(3, 1.5rem);
+    grid-template-columns: repeat(3, max-content);
     justify-content: end;
     align-content: end;
     gap: 1.5rem;
